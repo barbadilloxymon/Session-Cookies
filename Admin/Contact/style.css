@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: rgb(2, 2, 52);
+    --secondary-color: rgb(245, 162, 8);
+    --text-dark: #0f172a;
+    --primary: #0077b6;
+    --text-light: whitesmoke;
+    --extra-light: rgb(3, 5, 67);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+    --white: #ffffff;
+    --max-width:1200px;
+    --btn-color: rgb(26, 86, 251);
+    --header-font: "Playfair Display", serif;  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0; 
+    left: 0; 
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1rem;
+    color: var(--white);
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: var(--extra-light);
+}
+
+.sidebar:hover {
+    width: 240px;
+    transition: 0.5s;
+}
+
+.logo {
+    height: 80px;
+    padding: 12px;
+    color: var(--white);
+}
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin-top: 5rem;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: .5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+/* .menu li:hover, 
+.active {
+    background: var(--secondary-color);
+} */
+
+.menu a {
+    color: var(--white);
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.4rem;
+    /* align-items: center; */
+}
+
+/* .sidebar .menu li:hover, .sidebar .menu li.active {
+    background-color: var(--secondary-color); 
+    color:var(--white);
+} */
+
+.sidebar .menu li a {
+    color: inherit; /* Inherits color from the parent li */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.logout {
+    position: absolute;
+    margin-top: 14rem !important;
+    width: 100%;
+    color: var(--white) !important;
+}
+
+.main--content {
+    position: relative;
+    background-color: var(--text-light);
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header--title {
+    color: var(--text-dark);
+}
+
+.user--info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.search--box {
+    background: rgb(192, 192, 192);
+    border-radius: 3rem;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 4px 12px;
+    margin-right: auto;
+}
+
+.search--box input {
+    background: transparent;
+    padding: 10px;
+}
+
+.search--box i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.search--box i:hover {
+    transform: scale(1.2);
+}
